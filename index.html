@@ -74,6 +74,9 @@
 
             <script>  
 
+                
+                console.log(new Date().getTimezoneOffset());
+                
             let secondHand=document.querySelector("#sec");  
         let minHand=document.querySelector("#min")  
         let hourHand=document.querySelector("#hr")  
@@ -81,6 +84,9 @@
 
         setInterval(clockRotating,1000)  
 
+            
+                
+                
         function clockRotating(){  
             var date=new Date();  
             var getSeconds=date.getSeconds()/60;  
