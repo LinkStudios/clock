@@ -270,22 +270,3 @@ body{
             transform: translateX(-50%);  
             top:-6%;  
         }  
-
-        .current-day{  
-            position:absolute;  
-            font-size:12px;  
-            font-weight:bold;  
-            left:50%;  
-            transform:translateX(-50%);  
-            top:25%;  
-        }  
-        .current-seconds{  
-            position:absolute;  
-            font-size:12px;  
-            font-weight:bold;  
-            left:50%;  
-            transform:translateX(-50%);  
-            bottom:25%;  
-            background:purple;  
-            color:#fff;  
-            padding:4px;}  
