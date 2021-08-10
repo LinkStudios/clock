@@ -96,12 +96,12 @@ body{
 
         @keyframes clock-animation{  
         0%{  
-        background:#ee2121;  
+        background:#3e5;  
 
 
         }  
         50%{  
-            background:#3e5;  
+            background:#ee2121;  
 
         }  
 
