@@ -10,95 +10,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
     <script>
-  </script>
+    </script>
     <style>
-      @import 'style.css'
-  </style>
+        @import 'style.css'
+    </style>
 </head>
 
 <body>
-<div class="clock-container">  
-                <div class="current-day">  
+    <div class="clock-container">
+        <div class="current-day">
 
-                </div>  
-                 <div class="current-seconds">  
+        </div>
+        <div class="current-seconds">
 
-                </div>  
-                <div class="current-seconds"></div>  
-                <div class="clock-number num1">  
-                    <div>1</div>  
-                </div>  
-                <div class="clock-number num2">  
-                        <div>2</div>  
-                    </div>  
-                <div class="clock-number num3">  
-                    <div>3</div>  
-                 </div>  
-                 <div class="clock-number num4">  
-                     <div>4</div>  
-                    </div>  
-                 <div class="clock-number num5">  
-                    <div>5</div>  
-                     </div>  
-                     <div class="clock-number num6">  
-                       <div>6</div>  
-                    </div>  
-                    <div class="clock-number num7">  
-                  <div>7</div>  
-                    </div>  
-                  <div class="clock-number num8">  
-                     <div>8</div>  
-                    </div>  
-                    <div class="clock-number num9">  
-                      <div>9</div>  
-                      </div>  
-                     <div class="clock-number num10">  
-                       <div>10</div>  
-                         </div>  
-                      <div class="clock-number num11">  
-                     <div>11</div>  
-                      </div>  
-                      <div class="clock-number num12">  
-                   <div>12</div>  
-                    </div>  
-                     <div class="clock-hand" id="sec">  
-                  <div class="second-hand"></div>  
-                 </div>  
-                <div class="clock-hand" id="min">  
-                 <div class="minute-hand"></div>  
-                 </div>  
-               <div class="clock-hand" id="hr">  
-                 <div class="hour-hand"></div>  
-                </div>  
-            </div>  
+        </div>
+        <div class="current-seconds"></div>
+        <div class="clock-number num1">
+            <div>1</div>
+        </div>
+        <div class="clock-number num2">
+            <div>2</div>
+        </div>
+        <div class="clock-number num3">
+            <div>3</div>
+        </div>
+        <div class="clock-number num4">
+            <div>4</div>
+        </div>
+        <div class="clock-number num5">
+            <div>5</div>
+        </div>
+        <div class="clock-number num6">
+            <div>6</div>
+        </div>
+        <div class="clock-number num7">
+            <div>7</div>
+        </div>
+        <div class="clock-number num8">
+            <div>8</div>
+        </div>
+        <div class="clock-number num9">
+            <div>9</div>
+        </div>
+        <div class="clock-number num10">
+            <div>10</div>
+        </div>
+        <div class="clock-number num11">
+            <div>11</div>
+        </div>
+        <div class="clock-number num12">
+            <div>12</div>
+        </div>
+        <div class="clock-hand" id="sec">
+            <div class="second-hand"></div>
+        </div>
+        <div class="clock-hand" id="min">
+            <div class="minute-hand"></div>
+        </div>
+        <div class="clock-hand" id="hr">
+            <div class="hour-hand"></div>
+        </div>
+    </div>
 
-            <script>  
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        if (getCookie("loaded-once") != "") {
+            alert('This clock was made by Link4real and legendary-cookie, please be aware, that the clock is a bit broken at the moment and is getting fixed soon!');
+            document.cookie = "loaded-once=yeet;";
+        }
+        let secondHand = document.querySelector("#sec");
+        let minHand = document.querySelector("#min")
+        let hourHand = document.querySelector("#hr")
+        setInterval(clockRotating, 1000)
 
-                // Utc+02 by default or something
-                    alert( 'This clock was made by Link4real and legendary-cookie, please be aware, that the clock is a bit broken at the moment and is getting fixed soon!' );
+        function clockRotating() {
+            var date = new Date();
+            var getSeconds = date.getSeconds() / 60;
+            var getMinutes = date.getMinutes() / 60;
+            var getHours = date.getHours() / 12 + 2
 
-                console.log(new Date().getTimezoneOffset());
-                
-            let secondHand=document.querySelector("#sec");  
-        let minHand=document.querySelector("#min")  
-        let hourHand=document.querySelector("#hr")  
-
-
-        setInterval(clockRotating,1000)  
-
-            
-                
-                
-        function clockRotating(){  
-            var date=new Date();  
-            var getSeconds=date.getSeconds()/60;  
-            var getMinutes=date.getMinutes()/60;  
-            var getHours=date.getHours()/12+2  
-
-            secondHand.style.transform="rotate("+getSeconds*360 + "deg)"  
-            minHand.style.transform="rotate("+getMinutes*360 + "deg)"  
-            hourHand.style.transform="rotate("+getHours*360 + "deg)"  
-        }      
-            </script>  
+            secondHand.style.transform = "rotate(" + getSeconds * 360 + "deg)"
+            minHand.style.transform = "rotate(" + getMinutes * 360 + "deg)"
+            hourHand.style.transform = "rotate(" + getHours * 360 + "deg)"
+        }
+    </script>
 </body>
+
 </html>
