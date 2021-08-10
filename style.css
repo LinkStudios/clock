@@ -90,6 +90,7 @@ body{
             font-size: 20px;  
             overflow-x: hidden;  
             font-family: cursive;  
+             text-align: center;
 
         }  
 
@@ -115,6 +116,7 @@ body{
             border-radius: 50%;  
             position: relative;  
             background:#fff;  
+          text-align: center;
 
         }  
         .clock-container::after{  
@@ -126,6 +128,7 @@ body{
             left: 50%;  
             top: 50%;  
             transform: translate(-50%,-50%)  ;border-radius: 50%;  
+          text-align: center;
         }  
         .clock-number{  
             position: absolute;  
@@ -140,6 +143,7 @@ body{
             width:3px;  
             top:13%;  
             background:#000;  
+          text-align: center;
 
         }  
 
