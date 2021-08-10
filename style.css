@@ -96,7 +96,7 @@ body{
 
         @keyframes clock-animation{  
         0%{  
-        background:#3e5afb;  
+        background:#ee2121;  
 
 
         }  
@@ -106,7 +106,7 @@ body{
         }  
 
             100%{  
-                background: yellow;  
+                background:#ffffff;  
             }  
         }  
         .clock-container{  
