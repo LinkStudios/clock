@@ -9,28 +9,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
     <script>
-            function showTime() {
-            var date = new Date();
-            var h = date.getHours(); // 0 - 23
-            var m = date.getMinutes(); // 0 - 59
-            var s = date.getSeconds(); // 0 - 59
-            var session = "AM";
-            if (h == 0) {
-                h = 12;
-            }
-            if (h > 12) {
-                h = h - 12;
-                session = "PM";
-            }
-            h = (h < 10) ? "0" + h : h;
-            m = (m < 10) ? "0" + m : m;
-            s = (s < 10) ? "0" + s : s;
-            var time = h + ":" + m + ":" + s + " " + session;
-            document.getElementById("ClockDisp").innerText = time;
-            document.getElementById("ClockDisp").textContent = time;
-            setTimeout(showTime, 1000);
-        }
-        showTime();
+           // function showTime() {
+           // var date = new Date();
+           // var h = date.getHours(); // 0 - 23
+           // var m = date.getMinutes(); // 0 - 59
+           // var s = date.getSeconds(); // 0 - 59
+           // var session = "AM";
+           // if (h == 0) {
+           //     h = 12;
+           // }
+           // if (h > 12) {
+           //     h = h - 12;
+           //     session = "PM";
+           // }
+           // h = (h < 10) ? "0" + h : h;
+            //m = (m < 10) ? "0" + m : m;
+           // s = (s < 10) ? "0" + s : s;
+          //  var time = h + ":" + m + ":" + s + " " + session;
+           // document.getElementById("ClockDisp").innerText = time;
+           // document.getElementById("ClockDisp").textContent = time;
+           // setTimeout(showTime, 1000);
+      //  }
+        //showTime();
+  document.location.replace('https://link4real.github.io/maintenance.html')
     </script>
     <style>
         @import 'styledigital.css'
