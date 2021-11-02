@@ -9,6 +9,17 @@ h1 {
     text-align: center;
     }
     
+.clock {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #17D4FE;
+            font-size: 65px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+        }
+
     body {
       background-color: #021f35;
       margin: 0;
