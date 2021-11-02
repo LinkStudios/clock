@@ -1,31 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Digital Uhr</title>
     <meta charset="UTF-8">
-    <style>
-        body {
-            background: black;
-        }
-        
-        .clock {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            color: #17D4FE;
-            font-size: 65px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            letter-spacing: 7px;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="ClockDisp" class="clock" onload="showTime()"></div>
+    <meta name="description" content="Digital Clock by legendary-cookie and Link4real">
+    <meta name="keywords" content="Clock">
+    <meta name="author" content="Link4real, legendary-cookie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
     <script>
-        function showTime() {
+            function showTime() {
             var date = new Date();
             var h = date.getHours(); // 0 - 23
             var m = date.getMinutes(); // 0 - 59
@@ -48,6 +32,13 @@
         }
         showTime();
     </script>
+    <style>
+        @import 'styledigital.css'
+    </style>
+</head>
+<body>
+ <div class="spacer layer1">
+    <div id="ClockDisp" class="clock" onload="showTime()"></div>
+<div class="spacer layer2"></div>
 </body>
-
 </html>
