@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <title>Digital Uhr</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Digital Clock by legendary-cookie and Link4real">
-    <meta name="keywords" content="Clock">
-    <meta name="author" content="Link4real, legendary-cookie">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock</title>
-    <script>
-           // function showTime() {
-           // var date = new Date();
-           // var h = date.getHours(); // 0 - 23
-           // var m = date.getMinutes(); // 0 - 59
-           // var s = date.getSeconds(); // 0 - 59
-           // var session = "AM";
-           // if (h == 0) {
-           //     h = 12;
-           // }
-           // if (h > 12) {
-           //     h = h - 12;
-           //     session = "PM";
-           // }
-           // h = (h < 10) ? "0" + h : h;
-            //m = (m < 10) ? "0" + m : m;
-           // s = (s < 10) ? "0" + s : s;
-          //  var time = h + ":" + m + ":" + s + " " + session;
-           // document.getElementById("ClockDisp").innerText = time;
-           // document.getElementById("ClockDisp").textContent = time;
-           // setTimeout(showTime, 1000);
-      //  }
-        //showTime();
-  document.location.replace('https://link4real.github.io/maintenance.html')
-    </script>
     <style>
-        @import 'styledigital.css'
+        body {
+            background: black;
+        }
+
+        .clock {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #17D4FE;
+            font-size: 65px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+        }
     </style>
 </head>
+
 <body>
- <div class="spacer layer1">
-<section>
     <div id="ClockDisp" class="clock" onload="showTime()"></div>
-     </section>
-<div class="spacer layer2"></div>
+    <script>
+        function showTime() {
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "AM";
+            if (h == 0) {
+                h = 12;
+            }
+            if (h > 12) {
+                h = h - 12;
+                session = "PM";
+            }
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("ClockDisp").innerText = time;
+            document.getElementById("ClockDisp").textContent = time;
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+    </script>
 </body>
-</html>
+
+</html> 
